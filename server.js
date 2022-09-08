@@ -2,10 +2,11 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 http.createServer((req, res) => {
-    let file = req.url.replace("/", "");
+    let url = req.url.replace("/", "");
     if (req.url === '/') {
-        file = path.join(__dirname, './public/index.html');
+        url = 'index.html';
     }
+    const file = path.join(__dirname, './public/', url);
     try {
         const content = fs.readFileSync(file);
         res.writeHead(200, {
@@ -33,7 +34,7 @@ http.createServer((req, res) => {
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="alert alert-danger mt-5">404: ${file} not found </div>
+                            <div class="alert alert-danger mt-5">404: ${url} not found </div>
                         </div>
                     </div>
                 </div>
