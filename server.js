@@ -15,7 +15,7 @@ http.createServer((req, res) => {
         });
         res.end(content);
     } catch(e) {
-        res.writeHead(400, {
+        res.writeHead(404, {
             "Access-Control-Allow-Origin": "*",
             "Content-Type": "text/html"
         });
