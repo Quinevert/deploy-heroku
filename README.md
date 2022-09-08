@@ -6,5 +6,5 @@
     <li class="list-group-item">Create Github repo</li>
     <li class="list-group-item">Create Heroku app</li>
     <li class="list-group-item">Link Github repo to heroku app</li>
-    <li class="list-group-item">Deploy brank</li>
+    <li class="list-group-item">Deploy branch</li>
 </ol>
