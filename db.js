@@ -6,7 +6,8 @@ let db = null;
 exports.connect = async () => {
     if (db == null) {
         db = new Client({
-            connectionString: process?.env?.DATABASE_URL || dbUrl
+            connectionString: process?.env?.DATABASE_URL || dbUrl,
+            ...(process?.env?.DATABASE_URL ? {ssl: { rejectUnauthorized: false }} : {})
         });
         await db.connect();
         await db.query(`
