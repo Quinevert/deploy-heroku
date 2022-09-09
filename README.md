@@ -8,3 +8,8 @@
     <li class="list-group-item">Link Github repo to heroku app</li>
     <li class="list-group-item">Deploy branch</li>
 </ol>
+<h2>Create DB locally</h2>
+```
+psql -U postgres
+CREATE DATABASE deploy_heroku;
+```
