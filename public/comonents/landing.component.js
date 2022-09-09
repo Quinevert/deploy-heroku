@@ -11,5 +11,15 @@ const Landing = () => `
             <li class="list-group-item">Link Github repo to heroku app</li>
             <li class="list-group-item">Deploy branch</li>
         </ol>
+        <br />
+        <h2>Create DB locally</h2>
+        <hr />
+        <code class="m-1">
+            psql -U postgres
+        </code>
+        <br />
+        <code class="m-1">
+            CREATE DATABASE deploy_heroku;
+        </code>
     </div>
     `

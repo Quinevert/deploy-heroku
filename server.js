@@ -109,4 +109,4 @@ http.createServer(async (req, res) => {
             </html>
         `);
     }
-}).listen(process.env.PORT || 4500);
+}).listen(process.env.PORT || 4500, () => { console.log(`Server listening on port ${process.env.PORT || 4500}`)});
